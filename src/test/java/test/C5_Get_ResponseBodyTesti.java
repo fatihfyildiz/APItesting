@@ -21,7 +21,7 @@ public class C5_Get_ResponseBodyTesti {
 
     @Test
     public void get01(){
-        // 1 - Request icin Url ve Body hazirlayalim
+        // 1 - Request icin Url ve Body hazirlayalim (GET oldugu icin Body'e gerek yok)
         String url= "https://jsonplaceholder.typicode.com/posts/44";
 
         // 2- Expected Data hazirlanir

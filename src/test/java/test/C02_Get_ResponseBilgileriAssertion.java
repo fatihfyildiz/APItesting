@@ -20,7 +20,7 @@ public class C02_Get_ResponseBilgileriAssertion {
     @Test
     public void get02(){
 
-        // 1- Request icin Url ve Body hazirlanir
+        // 1- Request icin Url ve Body hazirlanir (GET oldugu icin Body'e gerek yok)
         String url= "https://restful-booker.herokuapp.com/booking/233827";
 
         // 2- Expected Data hazirlanir
