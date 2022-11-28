@@ -94,6 +94,11 @@ public class C08_JSONPathKullanimi {
                                                                 getJSONObject(0).
                                                                 get("Number"));
 
+        System.out.println("telefon type " + kisiBilgisi.
+                                                        getJSONArray("phoneNumbers").
+                                                        getJSONObject(1).
+                                                        get("type"));
+
     }
 
 }
