@@ -76,6 +76,7 @@ public class C09_Post_JsonPathileBodyTesti {
                                     body("booking.firstname", equalTo("Ali"),
                                     "booking.lastname",equalTo("Bak"),
                                     "booking.totalprice",equalTo(500),
+                                    "booking.depositpaid",equalTo(false),
                                     "booking.bookingdates.checkin",equalTo("2021-06-01"),
                                     "booking.bookingdates.checkout",equalTo("2021-06-10"),
                                     "booking.additionalneeds",equalTo("wi-fi"));
