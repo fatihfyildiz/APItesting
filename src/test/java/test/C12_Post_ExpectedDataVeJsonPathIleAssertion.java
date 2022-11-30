@@ -45,7 +45,7 @@ public class C12_Post_ExpectedDataVeJsonPathIleAssertion {
     @Test
     public void post01(){
         // 1 - Request URL ve Body hazirla
-        String url = "https://restful-booker.herokuapp.com/booking";
+        String url= "https://restful-booker.herokuapp.com/booking";
 
         JSONObject innerBody = new JSONObject();
         JSONObject reqBody = new JSONObject();
@@ -85,13 +85,15 @@ public class C12_Post_ExpectedDataVeJsonPathIleAssertion {
         // 4 - Assertion
         JsonPath resJS = response.jsonPath();
 
-        assertEquals(expBody.getJSONObject("booking").get("firstname"),resJS.get("booking.firstname"));
-        assertEquals(expBody.getJSONObject("booking").get("lastname"),resJS.get("booking.lastname"));
-        assertEquals(expBody.getJSONObject("booking").get("totalprice"),resJS.get("booking.totalprice"));
-        assertEquals(expBody.getJSONObject("booking").get("depositpaid"),resJS.get("booking.depositpaid"));
-        assertEquals(expBody.getJSONObject("booking").get("additionalneeds"),resJS.get("booking.additionalneeds"));
-        assertEquals(expBody.getJSONObject("booking").getJSONObject("bookingdates").get("checkin"),resJS.get("booking.bookingdates.checkin"));
-        assertEquals(expBody.getJSONObject("booking").getJSONObject("bookingdates").get("checkout"),resJS.get("booking.bookingdates.checkout"));
+        assertEquals("Booking firstname calismadi",expBody.getJSONObject("booking").get("firstname"),resJS.get("booking.firstname"));
+        assertEquals("Booking lastname calismadi",expBody.getJSONObject("booking").get("lastname"),resJS.get("booking.lastname"));
+        assertEquals("Booking total price calismadi",expBody.getJSONObject("booking").get("totalprice"),resJS.get("booking.totalprice"));
+        assertEquals("Booking deposit paid calismadi",expBody.getJSONObject("booking").get("depositpaid"),resJS.get("booking.depositpaid"));
+        assertEquals("Booking additional needs calismadi",expBody.getJSONObject("booking").get("additionalneeds"),resJS.get("booking.additionalneeds"));
+        assertEquals("Booking - booking dates - checkout calismadi",expBody.getJSONObject("booking").getJSONObject("bookingdates").get("checkin"),resJS.get("booking.bookingdates.checkin"));
+        assertEquals("Booking - booking dates - checkout calismadi",expBody.getJSONObject("booking").getJSONObject("bookingdates").get("checkout"),resJS.get("booking.bookingdates.checkout"));
+
+        // Yukarida, assert'ler calismazsa diye baslarina "mesaj" yazilabilir istenirse...
 
     }
 }
