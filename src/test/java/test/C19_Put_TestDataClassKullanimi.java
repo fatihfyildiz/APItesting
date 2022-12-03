@@ -2,6 +2,7 @@ package test;
 
 import baseURL.JsonPlaceHolderBaseURL;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.junit.Test;
@@ -69,11 +70,16 @@ public class C19_Put_TestDataClassKullanimi extends JsonPlaceHolderBaseURL {
          */
 
         // 4 - Assertion
+        JsonPath resJP= response.jsonPath();
+
         assertEquals(testDataJsonPlaceHolder.basariliStatusCode,response.getStatusCode());
         // bastaki Assert. kismini silip JUnit'ten import ettik
         assertEquals(testDataJsonPlaceHolder.contentType,response.contentType());
         assertEquals(testDataJsonPlaceHolder.connectionHeaderDegeri,response.header("Connection"));
-
+        assertEquals(expData.get("title"),resJP.get("title"));
+        assertEquals(expData.get("body"),resJP.get("body"));
+        assertEquals(expData.get("userId"),resJP.get("userId"));
+        assertEquals(expData.get("id"),resJP.get("id"));
 
     }
 
