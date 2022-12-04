@@ -2,6 +2,8 @@ package testData;
 
 import org.json.JSONObject;
 
+import java.util.HashMap;
+
 public class TestDataDummy {
 
     public int StatusCode= 200;
@@ -29,6 +31,26 @@ public class TestDataDummy {
         expDataJSON.put("message","Successfully! Record has been fetched.");
 
         return expDataJSON;
+    }
+
+    public HashMap expectedDataOlusturMap(){
+
+        HashMap<String,Object> innerMap= new HashMap<>();
+
+        innerMap.put("id",3.0);
+        innerMap.put("employee_name","Ashton Cox");
+        innerMap.put("employee_salary",86000.0);
+        innerMap.put("employee_age",66.0);
+        innerMap.put("profile_image","");
+
+        HashMap<String,Object> expMap= new HashMap<>();
+
+        expMap.put("status","success");
+        expMap.put("data",innerMap);
+        expMap.put("message","Successfully! Record has been fetched.");
+
+
+        return expMap;
     }
 
 }
