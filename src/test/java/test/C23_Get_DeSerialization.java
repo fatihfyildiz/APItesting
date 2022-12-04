@@ -54,8 +54,6 @@ public class C23_Get_DeSerialization extends DummyBaseURL {
 
         Response response= given().spec(specDummy).when().get("/{pp1}/{pp2}");
 
-
-
         response.prettyPrint();
 
         // 4 - Assertion
