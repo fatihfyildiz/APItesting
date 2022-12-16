@@ -31,7 +31,6 @@ public class C04_Put_ResponseBilgileriAssertion {
         // 1 - Request icin Url ve Body hazirlayalim
 
         String url= "https://jsonplaceholder.typicode.com/posts/70";
-
         JSONObject requestBody= new JSONObject();
 
         requestBody.put("title","Cemile");
