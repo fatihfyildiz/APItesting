@@ -16,7 +16,9 @@ public class C6_Post_ResponseBodyTesti {
         "body":"API ogrenmek ne guzel",
         "userId":10,
         }
+
         donen Response’un,
+
         status code’unun 201,
         ve content type’inin application/json
         ve Response Body'sindeki,
@@ -38,6 +40,8 @@ public class C6_Post_ResponseBodyTesti {
         requestBody.put("body","API ogrenmek ne guzel");
         requestBody.put("userId",10);
 
+        System.out.println(requestBody);
+
         // 2- Expected Data hazirlanir
         // bu soruda expected data yok, bilgilerin hepsi yukarida
 
@@ -53,7 +57,8 @@ public class C6_Post_ResponseBodyTesti {
 
         // 4 - Assertion
 
-        response.then().assertThat().statusCode(201).
+        response.then().assertThat().
+                                    statusCode(201).
                                     contentType(ContentType.JSON).
                                     body("title", Matchers.equalTo("API")).
                                     body("userId",Matchers.lessThan(100)).

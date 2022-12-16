@@ -30,6 +30,7 @@ public class C02_Get_ResponseBilgileriAssertion {
         Response response= given().when().get(url);
         response.prettyPrint();
 
+        // 4- Assertion
         response.then().assertThat().statusCode(200).
                                     contentType("application/json; charset=utf-8").
                                     header("Server", "Cowboy").
