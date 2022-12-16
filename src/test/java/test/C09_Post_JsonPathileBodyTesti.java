@@ -60,14 +60,18 @@ public class C09_Post_JsonPathileBodyTesti {
         reqBody.put("bookingdates", innerBody);
         reqBody.put("additionalneeds","wi-fi");
 
-        System.out.println(reqBody);
+        System.out.println("Request Body : " + reqBody);
 
         // 2- Expected Data hazirlanir
         // bu soruda expected data yok, bilgilerin hepsi yukarida
 
         // 3- Response'u kaydet
 
-        Response response= given().contentType(ContentType.JSON).when().body(reqBody.toString()).post(url);
+        Response response= given().
+                                    contentType(ContentType.JSON).
+                            when().
+                                    body(reqBody.toString()).post(url);
+
         response.prettyPrint();
 
         // 4 - Assertion
