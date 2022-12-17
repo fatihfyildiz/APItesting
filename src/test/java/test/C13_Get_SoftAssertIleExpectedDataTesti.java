@@ -52,6 +52,7 @@ public class C13_Get_SoftAssertIleExpectedDataTesti {
 
         // 3 - Response'u kaydet
         Response response = given().when().get(url); // GET oldugu icin contentType(ContentType.JSON) kismina gerek yok
+
         response.prettyPrint();
 
         // 4 - Assertion
